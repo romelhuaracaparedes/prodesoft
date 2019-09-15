@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Pagina de ventas</h1>
+	
+	<article>
+		<header>
+			<span th:text="${producto.nombre}"></span>
+		</header>
+		<div>
+			<div> Precio:<span th:text="${producto.precio}"></span></div>
+			<div> Descripcion: <span th:text="${producto.descripcion}"></span></div>
+			<div> Cantidad: <span th:text="${producto.cantidad}"></span></div>
+			
+		</div>
+	</article>
+	
+	
+	
+	
+	<span th:text="${precio}"></span>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body>
+	<div class="container">
+		<form th:action="@{/curso/agregarCurso}"  th:object="${cursoModel}" method="post">
+		  <div class="form-group">
+		    <label for="nombre">Nombre:</label>
+		    <input type="text" class="form-control" id="nombre" th:field="*{nombre}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="decripcion">Descripcion:</label>
+		    <input type="text" class="form-control" id="descripcion" th:field="*{descripion}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="precio">precio:</label>
+		    <input type="number" class="form-control" id="precio" th:field="*{precio}"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="horas">Horas:</label>
+		    <input type="number" class="form-control" id="horas" th:field="*{horas}"/>
+		  </div>
+		  
+		  <input type="submit" class="btn btn-primary" value="Registrar"/>
+		</form>
+		<br/>
+		<table class="table table-striped table-hover">
+			<thead class="bg-success text-white">
+				<tr>
+					<th>Nombre</th>
+					<th>Descripcion</th>
+					<th>Precio</th>
+					<th>Horas</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="curso : ${cursos}">
+					<td th:text="${curso.nombre}"></td>
+					<td th:text="${curso.descripion}"></td>
+					<td th:text="${curso.precio}"></td>
+					<td th:text="${curso.horas}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
