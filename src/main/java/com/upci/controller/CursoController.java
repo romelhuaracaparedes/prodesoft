@@ -26,6 +26,11 @@ public class CursoController {
 		mav.addObject("cursoModel", new Curso());
 		mav.addObject("cursos", cursoServiceImpl.listarCursos());
 		return mav;
+		
+
+
+
+
 	}
 	
 	
