@@ -25,11 +25,9 @@ public class CursoController {
 		ModelAndView mav = new ModelAndView("formulariocurso");
 		mav.addObject("cursoModel", new Curso());
 		mav.addObject("cursos", cursoServiceImpl.listarCursos());
+	System.out.println("hola");
 		return mav;
 		
-
-
-
 
 	}
 	
